@@ -1,0 +1,28 @@
+{
+  "name": "simplenodejs",
+  "version": "1.0.0",
+  "description": "a simple nodejs project",
+  "main": "app.js",
+  "dependencies": {
+    "browser-sync": "^2.9.6",
+    "express": "^4.13.3",
+    "jade": "^1.11.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/popmusicbbq/SimpleNodeJs.git"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "Gwynn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/popmusicbbq/SimpleNodeJs/issues"
+  },
+  "homepage": "https://github.com/popmusicbbq/SimpleNodeJs#readme"
+}
