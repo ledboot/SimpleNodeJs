@@ -18,3 +18,5 @@ app.use("/public",express.static(staticDir));
 app.use('/',webRouter);
 
 app.listen(config.port);
+
+console.log("node server run on "+config.port);

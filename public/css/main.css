@@ -1,1 +1,18 @@
 .coo{color: #ccc;}
+.clear{clear: both;}
+.absolute-center{margin:auto;position:absolute;top:0;left:0;bottom:0;right:0;}
+/*header*/
+.mainHead{background: #14485f;position: relative;width: 100%;top: 0;overflow: hidden;}
+.mainHead .container{width: 990px;position: relative; margin-left: auto;margin-right: auto;}
+.mainNav{float: left;width: 50%;}
+.mainNav ul {list-style: none;text-align: left;margin: 0;}
+.menu-item{display: inline-block;}
+.menu-item a{display: inline-block;padding: 15px 10px 15px;color: white;text-decoration: none;}
+.accountNav{float: right;width: 30%;}
+.accountNav ul{ist-style: none;text-align: left;margin: 0;}
+
+/*container*/
+#langing{background: #2f9fb7;}
+#langing-page{background: url(../images/top_background.png) no-repeat;position: relative;height: 720px;}
+.container{width: 990px;margin-left: auto;margin-right: auto;position: relative;}
+.container .about-content{height: 320px;padding: 0;color: #FFFFFF;margin: auto;position: absolute;text-align: center;top: 100px;}
