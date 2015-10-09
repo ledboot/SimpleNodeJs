@@ -7,7 +7,7 @@ var config = {
   	keywords: 'nodejs,',
 
   	// mongodb 配置
-  	db: 'mongodb://127.0.0.1/node_club_dev',
+  	db: 'mongodb://127.0.0.1/simple_nodejs',
 
   	// 程序运行的端口
   	port: 8080,

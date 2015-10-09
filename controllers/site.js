@@ -4,3 +4,4 @@ exports.index = function(req,res,next){
 		title:"hello nodejs!"
 	});
 };
+
