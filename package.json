@@ -4,10 +4,13 @@
   "description": "a simple nodejs project",
   "main": "app.js",
   "dependencies": {
+    "body-parser": "^1.14.1",
     "browser-sync": "^2.9.6",
+    "eventproxy": "^0.3.4",
     "express": "^4.13.3",
     "jade": "^1.11.0",
-    "mongoose": "^4.1.10"
+    "mongoose": "^4.1.10",
+    "node-uuid": "^1.4.3"
   },
   "devDependencies": {},
   "scripts": {

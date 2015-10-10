@@ -1,6 +1,7 @@
 var express = require('express');
 var webRouter = require('./web_router');
 var config = require('./config');
+var bodyParser = require('body-parser');
 var app = express();
 
 app.set("views","./views");
@@ -11,7 +12,9 @@ var path =require("path");
 //static file
 var staticDir = path.join(__dirname,"public");
 
-//app.use(app.router);
+app.use(bodyParser.json({limit:'1mb'}));
+
+app.use(bodyParser.urlencoded({extended:true,limit:'1mb'}));
 
 app.use("/public",express.static(staticDir));
 
