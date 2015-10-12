@@ -1,5 +1,5 @@
 var moment = require('moment');
-
+var bcrypt = require('bcrypt');
 moment.locale('zh-cn');
 
 exports.formatDate = function(date,firendly){
@@ -9,4 +9,8 @@ exports.formatDate = function(date,firendly){
 	}else{
 		return date.format('YYYY-MM-DD HH:mm');
 	}
+};
+
+exports.bhash = function(str,callback){
+	bcrypt.hash(str,10,callback);
 };

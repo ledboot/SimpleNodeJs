@@ -17,6 +17,6 @@
 .about-content{height: 320px;padding: 0;color: #FFFFFF;margin: auto;position: absolute;text-align: center;top: 100px;}
 
 /*sign*/
-.regist-form{margin-right:auto;margin-left:auto;width:500px;}
+.regist-form{ margin-top: 20px;margin-right:auto;margin-left:auto;width:500px;}
 .msg{color:#ff9c00;background-color:#fff;border-radius:2px;margin-bottom:25px}
 @media (min-width:600px){.base-from{background-color:#fff;border-color:#ccc;border-width:1px;border-radius:4px 4px 0 0;-webkit-box-shadow:none;box-shadow:none}
