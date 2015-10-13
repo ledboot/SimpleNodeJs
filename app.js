@@ -6,7 +6,8 @@ var app = express();
 
 app.set("views","./views");
 app.set("view engine","html");
-app.engine('html',require('ejs').renderFile);
+app.engine('html',require('ejs-mate'));
+app.locals._layoutFile = 'layout.html';
 
 
 var path =require("path");

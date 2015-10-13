@@ -1,0 +1,41 @@
+<div class="container">
+	<div class="regist-form">
+		<%if (typeof(error) !== 'undefined' && error){%>
+			<div class="alert alert-warning alert-dismissible" role="alert">
+				<button class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<strong>Warning!</strong> <%= error%>
+			</div>
+		<%}%>
+		<%if (typeof(success) != 'undefined' && success){%>
+			<div role="alert" class='alert alert-success alert-dismissible'>
+				<button class='close' data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<strong>Success!</strong> <%= success%>
+			</div>
+		<%} else {%>
+			<form action="/signup" method="post">
+				<div class="base-from">
+					<h4>Register</h4>
+					<div class="form-group">
+						<input id='email' name='email' type='text' class='form-control' placeholder="Email" />
+					</div>
+					<div class="form-group">
+						<input id='userName' name='userName' type='text' class='form-control' placeholder='UserName' />
+					</div>
+					<div class="form-group">
+						<input id='pass' name='pass' type='password' class='form-control' placeholder='Password' />
+					</div>
+					<div class="form-group">
+						<input id='verifyPass' name='verifyPass' type='password' class='form-control' placeholder='verify Password'/>
+					</div>
+					<div class="form-group">
+						<input type='submit' class='btn btn-primary btn-block' value='Submit'/>
+					</div>
+				</div>
+			</form>
+		<%}%>
+	</div>
+</div>
