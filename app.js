@@ -5,12 +5,13 @@ var bodyParser = require('body-parser');
 var app = express();
 
 app.set("views","./views");
-app.set("view engine","jade");
+app.set("view engine","html");
+app.engine('html',require('ejs').renderFile);
 
 
 var path =require("path");
 //static file
-var staticDir = path.join(__dirname,"public");
+var staticDir = path.join(__dirname,"/public");
 
 app.use(bodyParser.json({limit:'1mb'}));
 
