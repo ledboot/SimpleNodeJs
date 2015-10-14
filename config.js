@@ -8,7 +8,7 @@ var config = {
   site_static_host:'',
 
 	description: '', // 网站的描述
-  	keywords: 'nodejs,',
+  keywords: 'nodejs,',
 
   	// mongodb 配置
   	db: 'mongodb://127.0.0.1/simple_nodejs',
@@ -27,6 +27,8 @@ var config = {
   			pass:'wengaowei100;.'
   		}
   	},
+
+    auth_cookie_name:'simple_nodejs',
 };
 
 module.exports = config;

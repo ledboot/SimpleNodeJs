@@ -3,7 +3,6 @@
 .absolute-center{margin:auto;position:absolute;top:0;left:0;bottom:0;right:0;}
 /*header*/
 .mainHead{background: #14485f;position: relative;width: 100%;top: 0;overflow: hidden;}
-.mainHead .container{width: 990px;position: relative; margin-left: auto;margin-right: auto;}
 .mainNav{float: left;width: 50%;}
 .mainNav ul {list-style: none;text-align: left;margin: 0;}
 .menu-item{display: inline-block;}
@@ -17,6 +16,4 @@
 .about-content{height: 320px;padding: 0;color: #FFFFFF;margin: auto;position: absolute;text-align: center;top: 100px;}
 
 /*sign*/
-.regist-form{ margin-top: 20px;margin-right:auto;margin-left:auto;width:500px;}
-.msg{color:#ff9c00;background-color:#fff;border-radius:2px;margin-bottom:25px}
-@media (min-width:600px){.base-from{background-color:#fff;border-color:#ccc;border-width:1px;border-radius:4px 4px 0 0;-webkit-box-shadow:none;box-shadow:none}
+@media (min-width:600px){.base-from{margin-top: 20px;margin-right:auto;margin-left:auto;width:500px;}

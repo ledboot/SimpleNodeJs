@@ -7,6 +7,7 @@
     "bcrypt": "^0.8.5",
     "body-parser": "^1.14.1",
     "browser-sync": "^2.9.6",
+    "cookie-parser": "^1.4.0",
     "ejs-mate": "^2.3.0",
     "eventproxy": "^0.3.4",
     "express": "^4.13.3",

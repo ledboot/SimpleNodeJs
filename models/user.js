@@ -2,12 +2,15 @@ var mongoose = require('mongoose');
 var BaseModel = require('./base_model');
 var Schema = mongoose.Schema;
 var UserSchema =new Schema({
-	nick_name:{type:String},
+	loginname:{type:String},
+	nickname:{type:String},
 	pass:{type:String},
 	email:{type:String},
 	avatar:{type:String},
 	create_at:{type:Date,default:Date.now},
 	update_at:{type:Date,default:Date.now},
+	active:{type:Boolean,default:false},
+	signaturn:{type:String},
 	accessToken:{type:String},
 });
 
