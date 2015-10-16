@@ -5,7 +5,8 @@ var config = {
   
 	name:'SimpleNodeJs',
 
-  site_static_host:'',
+  // cdn host
+  site_static_host:'',// 静态文件存储域名
 
 	description: '', // 网站的描述
   keywords: 'nodejs,',

@@ -5,9 +5,27 @@ var tools = require('../common/tools');
 var mail = require('../common/mail');
 var utility = require('utility');
 var config = require('../config');
+var auth = require('../middleware/auth');
 
-exports.showLogin =function(req,res){
+/**
+ * define some page when login just jump to the home page
+ * @type {Array}
+ */
+var notJump = [
+  '/active_account', //active page
+  '/reset_pass',     //reset password page, avoid to reset twice
+  '/signup',         //regist page
+  '/search_pass'    //serch pass page
+];
+
+/*跳转注册页面*/
+exports.showLoginUp =function(req,res){
 	res.render('sign/signup');
+};
+
+/*跳转登陆页面*/
+exports.showLoginIn = function(req,res){
+	res.render('sign/signin');
 };
 
 /**注册**/
@@ -86,6 +104,51 @@ exports.activeAccount = function(req,res,next){
 	});
 }
 
-exports.signin = function(req,res){
-	res.render('sign/signin');
+exports.login = function(req,res,next){
+	var name = validator.trim(req.body.username).toLowerCase（）;
+	var pass = validator.trim(req.body.pass);
+	var ep = new eventproxy();
+	ep.fail(next);
+
+	if(!name || !pass){
+		res.status(422);
+		return res.render('sign/signin',{error:'信息不完整。'});
+	}
+	var getUser;
+
+
+	if(namex.indexof('@') != -1){
+		getuser = User.getUserByMail;
+	}else{
+		getUser =User.getUserByLoginName;
+	}
+
+	ep.on('login_error',function(login_error){
+		res.status(403);
+		res.render('sign/signin',{error:'用户名或密码错误'});
+	});
+
+	getUser(name,function(err,user){
+		if(err){
+			return next(err);
+		}
+		if(!user){
+			return ep.emit('login_error');
+		}
+		var passhash = user.pass;
+		tools.bcompare(pass,passhash,ep.done(function(bool){
+			if(!bool){
+				return ep.emit('login_error');
+			}
+			if(!user.active){
+				mail.sendActiveMail(user.email,utility.md5(user.email+passhash+config.session_secret),user.loginname);
+				res.status(403);
+				return res.render('sign/signin',{ error: '此帐号还没有被激活，激活链接已发送到 ' + user.email + ' 邮箱，请查收。'});
+			}
+			auth.gen_session(user,res);
+			//这里可以记录用户在未登录之前，访问的地址，登陆之后调回那个页面
+			res.redirect('/');
+		}));
+
+	});
 };

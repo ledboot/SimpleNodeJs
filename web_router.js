@@ -7,11 +7,12 @@ var sign =require('./controllers/sign');
 var router = express.Router();
 
 
-router.get('/',site.index);
-router.get('/signup',sign.showLogin);
-router.post('/signup',sign.signup);
-router.get('/active_account',sign.activeAccount);
-router.get('/signin',sign.signin);
+router.get('/',site.index);//首页
+router.get('/signup',sign.showLoginUp);//注册页面
+router.get('/signin',sign.showLoginIn);//登陆页面
+router.post('/signup',sign.signup);//注册
+router.get('/active_account',sign.activeAccount);//账号激活
+router.post('/login',sign.login);//登陆
 
 
 module.exports = router;

@@ -2,15 +2,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 
-<meta charset="utf-8"/>
+	<meta charset="utf-8"/>
 
-<!--style-->
-<link rel="stylesheet" type="text/css" href="/public/libs/normalize.css">
-<link rel="stylesheet" type="text/css" href="/public/libs/bootstrap/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="/public/css/main.css">
+	<!--style-->
 
-<script type="text/javascript" src="/public/libs/jquery.min.js"></script>
-<script type="text/javascript" src="public/libs/bootstrap/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="/public/libs/normalize.css">
+	<link rel="stylesheet" type="text/css" href="/public/libs/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/public/css/main.css">
+
+
+	<script type="text/javascript" src="/public/libs/jquery.min.js"></script>
+	<script type="text/javascript" src="/public/libs/bootstrap/js/bootstrap.min.js"></script>
 
 </head>
 <body>
@@ -31,12 +33,22 @@
 			</nav>
 			<nav class="accountNav">
 				<ul>
+					<% if(current_user){%>
 					<li class="menu-item">
-						<a href="/signup">Sign up</a>
+						<a href="#">注册</a>
 					</li>
 					<li class="menu-item">
-						<a href="/signin">Sign in</a>
+						<a href="/signin">登陆</a>
 					</li>
+					<%}else{%>
+					<li class="menu-item">
+						<a href="/signup">注册</a>
+					</li>
+					<li class="menu-item">
+						<a href="/signin">登陆</a>
+					</li>
+					<%}%>
+					
 				</ul>
 			</nav>
 		</div>

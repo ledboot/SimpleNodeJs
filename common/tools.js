@@ -14,3 +14,7 @@ exports.formatDate = function(date,firendly){
 exports.bhash = function(str,callback){
 	bcrypt.hash(str,10,callback);
 };
+
+exports.bcompare = function(pass,passhash,callback){
+	bcrypt.compare(pass,passhash,callback);
+};
