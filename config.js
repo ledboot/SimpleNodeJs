@@ -17,8 +17,6 @@ var config = {
   	// 程序运行的端口
   	port: 8080,
 
-    session_secret:'simple_nodejs_secret',
-
   	host:'localhost',
 
   	mail_opts:{
@@ -30,6 +28,7 @@ var config = {
   	},
 
     auth_cookie_name:'simple_nodejs',
+    session_secret:'simple_nodejs_secret',
 };
 
 module.exports = config;

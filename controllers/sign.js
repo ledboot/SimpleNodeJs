@@ -105,12 +105,15 @@ exports.activeAccount = function(req,res,next){
 }
 
 exports.login = function(req,res,next){
-	var name = validator.trim(req.body.username).toLowerCase（）;
+	console.log('login xxxxxxxxxxxxxxxx');
+	/*var loginname = validator.trim(req.body.loginname).toLowerCase();
+	var pass = validator.trim(req.body.pass);*/
+	console.log('req：'+req.body);
+	var loginname = req.body.loginname;
 	var pass = validator.trim(req.body.pass);
 	var ep = new eventproxy();
 	ep.fail(next);
-
-	if(!name || !pass){
+	if(!loginname || !pass){
 		res.status(422);
 		return res.render('sign/signin',{error:'信息不完整。'});
 	}
@@ -128,7 +131,7 @@ exports.login = function(req,res,next){
 		res.render('sign/signin',{error:'用户名或密码错误'});
 	});
 
-	getUser(name,function(err,user){
+	getUser(loginname,function(err,user){
 		if(err){
 			return next(err);
 		}
@@ -146,6 +149,7 @@ exports.login = function(req,res,next){
 				return res.render('sign/signin',{ error: '此帐号还没有被激活，激活链接已发送到 ' + user.email + ' 邮箱，请查收。'});
 			}
 			auth.gen_session(user,res);
+			console.log('gen_session');
 			//这里可以记录用户在未登录之前，访问的地址，登陆之后调回那个页面
 			res.redirect('/');
 		}));

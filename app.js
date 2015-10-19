@@ -2,12 +2,13 @@ var express = require('express');
 var webRouter = require('./web_router');
 var config = require('./config');
 var bodyParser = require('body-parser');
-var app = express();
 var path = require("path");
 var auth = require('./middleware/auth');
 var _ = require('lodash');
+var session = require('express-session');
 
-var assets ={};
+var app = express();
+
 
 app.set("views","./views");
 app.set("view engine","html");
@@ -25,12 +26,17 @@ app.use('/',webRouter);
 app.use(bodyParser.json({limit:'1mb'}));
 app.use(bodyParser.urlencoded({extended:true,limit:'1mb'}));
 app.use(require('cookie-parser')(config.session_secret));
-
+app.use(session({
+	secret:config.session_secret,
+	resave:true,
+	saveUninitialized:true,
+}));
 
 
 
 //custom middleware
 app.use(auth.authUser);
+
 
 
 app.listen(config.port);
