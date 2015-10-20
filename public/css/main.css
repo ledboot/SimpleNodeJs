@@ -1,19 +1,95 @@
 .coo{color: #ccc;}
-.clear{clear: both;}
-.absolute-center{margin:auto;position:absolute;top:0;left:0;bottom:0;right:0;}
-/*header*/
-.mainHead{background: #14485f;position: relative;width: 100%;top: 0;overflow: hidden;}
+.clearfix:after { clear: both; content: ""; font-size: 0;  height: 0; display: block; visibility: hidden; }
+body { background-color:#f9f9f9; 
+	background-image:url(../images/pattern23.png); 
+	background-repeat:repeat; background-attachment:scroll; background-position:0 0; background-size:inherit; }
+.center-width{border-top: 1px solid rgba(0, 0, 0, 0.09);}
+
+
+.mainHead{position: relative;width: 100%;top: 0;overflow: hidden;background-color: #ffffff;border-bottom: 1px solid rgba(0, 0, 0, 0.09);}
 .mainNav{float: left;width: 50%;}
 .mainNav ul {list-style: none;text-align: left;margin: 0;}
 .menu-item{display: inline-block;}
-.menu-item a{display: inline-block;padding: 15px 10px 15px;color: white;text-decoration: none;}
+.menu-item a{display: inline-block;padding: 0px 10px;color: white;text-decoration: none;line-height: 60px;}
 .accountNav{float: right;width: 30%;}
 .accountNav ul{ist-style: none;text-align: left;margin: 0;}
 
+/*-----------------------------------------------------------------------------------*/
+/*	4. Header
+/*-----------------------------------------------------------------------------------*/
+.top-bar{max-width: 100%;margin: 0 auto;background: #14485f;position: relative;}
+
+.header{
+	clear: both;
+	max-width: 100%;
+	position: relative;
+}
+.logo-wrap {
+	margin-top: 22px;
+	margin-bottom: 22px;
+	display:inline-block;
+}
+.logo{
+	overflow: hidden;
+	line-height: 100px;
+	height: 100px;
+	text-align: center;
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/*	5. Navigation
+/*----------------------------------------------------------------------------------*/
+.menu{
+	margin:0;
+	padding:0;
+	list-style:none;
+	line-height: 1.0;
+}
+.nav-menu{
+	text-align: center;
+	display: block;
+}
+.nav-menu ul li{
+	display: inline-block;
+	float: right;
+	list-style: none;
+	position: relative;
+}
+
+.nav-menu .menu a{
+	line-height: 60px;
+	display: block;
+	position: relative;
+}
+.menu a{
+	color: #aaaaaa;
+	font-size: 16px;
+	text-decoration: none;
+	padding: 0px 10px;
+}
+.main-nav .nav-menu ul li {
+	float: none;
+}
+
+.main-navigation{
+	font-size: 13px;
+	line-height: 20px;
+	margin-bottom: -1px;
+	position: relative;
+	text-transform: uppercase;
+	width: 100%;
+}
+
 /*container*/
-#langing{background: #2f9fb7;}
-#langing-page{background: url(../images/top_background.png) no-repeat;position: relative;height: 720px;}
-.about-content{height: 320px;padding: 0;color: #FFFFFF;margin: auto;position: absolute;text-align: center;top: 100px;}
+
 
 /*sign*/
 @media (min-width:600px){.base-from{margin-top: 20px;margin-right:auto;margin-left:auto;width:500px;}
+
+
+
+/*-------------------*/
+/* Social Links
+/*-------------------*/
+

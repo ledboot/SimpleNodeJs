@@ -3,56 +3,90 @@
 <head>
 
 	<meta charset="utf-8"/>
-
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 	<!--style-->
 
 	<link rel="stylesheet" type="text/css" href="/public/libs/normalize.css">
 	<link rel="stylesheet" type="text/css" href="/public/libs/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/public/libs/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="/public/libs/swiper/css/swiper.min.css">
 	<link rel="stylesheet" type="text/css" href="/public/css/main.css">
 
 
 	<script type="text/javascript" src="/public/libs/jquery.min.js"></script>
 	<script type="text/javascript" src="/public/libs/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/public/libs/swiper/js/swiper.min.js"></script>
 
 </head>
 <body>
 	<header class="mainHead">
-		<div class="container">
-			<nav class="mainNav">
-				<ul>
-					<li class="menu-item">
-						<a href="/">Home</a>
-					</li>
-					<li class="menu-item">
-						<a href="#">News</a>
-					</li>
-					<li class="menu-item">
-						<a href="#">About</a>
-					</li>
-				</ul>
-			</nav>
-			<nav class="accountNav">
-				<ul>
-					<% if(typeof(current_user) != 'undefined' && current_user){%>
-					<li class="menu-item">
-						<a href="#">已经登陆了</a>
-					</li>
-					<li class="menu-item">
-						<a href="/signin">注销</a>
-					</li>
-					<%}else{%>
-					<li class="menu-item">
-						<a href="/signin">登陆</a>
-						
-					</li>
-					<li class="menu-item">
-						<a href="/signup">注册</a>
-					</li>
-					<%}%>
-					
-				</ul>
-			</nav>
+		<div class="top-bar clearfix">
+			<div class="container">
+				<div class="nav-menu">
+					<ul class="menu">
+						<li><a href="#"><i class="fa fa-lg fa-google-plus-square"></i></a></li>
+						<li><a href="#"><i class="fa fa-lg fa-github"></i></a></li>
+						<li><a href="#"><i class="fa fa-lg fa-facebook-official"></i></a></li>
+					</ul>
+				</div>
+				<nav class="accountNav">
+					<ul>
+						<% if(current_user){%>
+						<li class="menu-item">
+							<a href="#"><%=current_user.nickname%></a>
+						</li>
+						<li class="menu-item">
+							<a href="/signin">退出</a>
+						</li>
+						<%}else{%>
+						<li class="menu-item">
+							<a href="/signin">登陆</a>
+
+						</li>
+						<li class="menu-item">
+							<a href="/signup">注册</a>
+						</li>
+						<%}%>
+
+					</ul>
+				</nav>
+			</div>
 		</div>
+		<!-- top-bar-->
+		<div class="header clearfix">
+			<div class="container">
+				<div class="logo-wrap">
+					<div class="logo">
+						<a href="#"><img src="http://demo.bloompixel.com/travelista/wp-content/uploads/sites/18/2014/10/logo1.png" alt=""></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- header-->
+		<div class="main-navigation">
+			<div class="container">
+				<div class="main-nav">
+					<div class="center-width">
+						<nav class="nav-menu">
+							<ul class="menu">
+								<li >
+								<a href="/"><i class="fa fa-home"></i>Home</a>
+								</li>
+								<li >
+									<a href="#">News</a>
+								</li>
+								<li >
+									<a href="#">About</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</div>
+
+		
+		<!-- main-navigation-->
 	</header>
 	<div id="main">
 		<%- body%>

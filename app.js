@@ -18,9 +18,8 @@ app.locals._layoutFile = 'layout.html';//母版页
 var staticDir = path.join(__dirname,"/public");
 
 //static file
-
 app.use("/public",express.static(staticDir));
-app.use('/',webRouter);
+
 
 //middleware
 app.use(bodyParser.json({limit:'1mb'}));
@@ -38,6 +37,7 @@ app.use(session({
 app.use(auth.authUser);
 
 
+app.use('/',webRouter);//一定要放在bodyParser之后。
 
 app.listen(config.port);
 

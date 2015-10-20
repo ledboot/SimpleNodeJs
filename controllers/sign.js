@@ -105,11 +105,7 @@ exports.activeAccount = function(req,res,next){
 }
 
 exports.login = function(req,res,next){
-	console.log('login xxxxxxxxxxxxxxxx');
-	/*var loginname = validator.trim(req.body.loginname).toLowerCase();
-	var pass = validator.trim(req.body.pass);*/
-	console.log('req：'+req.body);
-	var loginname = req.body.loginname;
+	var loginname = validator.trim(req.body.name).toLowerCase();
 	var pass = validator.trim(req.body.pass);
 	var ep = new eventproxy();
 	ep.fail(next);
@@ -120,7 +116,7 @@ exports.login = function(req,res,next){
 	var getUser;
 
 
-	if(namex.indexof('@') != -1){
+	if(loginname.indexOf('@') != -1){
 		getuser = User.getUserByMail;
 	}else{
 		getUser =User.getUserByLoginName;
@@ -155,4 +151,11 @@ exports.login = function(req,res,next){
 		}));
 
 	});
+};
+
+/*登出*/
+exports.signOut = function(req,res,next){
+	req.session.destroy();
+	res.clearCookie(config.auth_cookie_name,{path:'/'});
+	res.redirect('/');
 };

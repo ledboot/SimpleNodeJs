@@ -19,8 +19,10 @@
   ],
   "dependencies": {
     "bootstrap": "3.1.0",
+    "font-awesome": "~4.4.0",
     "jquery": "2.1.0",
     "moment": "2.10.6",
-    "normalize-css": "normalize.css#~3.0.3"
+    "normalize-css": "normalize.css#~3.0.3",
+    "Swiper": "swiper#~3.1.7"
   }
 }

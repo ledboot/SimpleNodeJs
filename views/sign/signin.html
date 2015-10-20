@@ -1,9 +1,17 @@
 <div class="container">
 	<div class="base-from">
+		<%if (typeof(error) !== 'undefined' && error){%>
+		<div class="alert alert-warning alert-dismissible" role="alert">
+			<button class="close" data-dismiss="alert" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>
+			<strong>Warning!</strong> <%= error%>
+		</div>
+		<%}%>
 		<form action="/signin" method="post">
 			<h4>登陆</h4>
 			<div class="form-group">
-				<input id='loginname' name='loginname' type='text' class='form-control' placeholder="用户名" />
+				<input id='name' name='name' type='text' class='form-control' placeholder="用户名" />
 			</div>
 			<div class="form-group">
 				<input id='pass' name='pass' type='password' class='form-control' placeholder="密码" />

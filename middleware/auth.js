@@ -31,8 +31,7 @@ exports.authUser = function(req,res,next){
 		}
 		user = res.locals.current_user = req.session.user = new UserModel(user);
 		//这里可以对user赋值是否是管理员
-
-
+		next();
 	});
 	console.log('sssssss'+req.session+'xxx');
 
@@ -47,6 +46,7 @@ exports.authUser = function(req,res,next){
 		}
 		var auth = auth_token.split('$$$$');
 		var user_id = auth[0];
+		console.log('userId:'+user_id);
 		UserProxy.getUserById(user_id,ep.done('get_user'));
 	}
 };
