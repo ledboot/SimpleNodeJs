@@ -1,0 +1,169 @@
+
+<style type="text/css">
+	.swiper-container {
+		width: 100%;
+		height: 100%;
+	}
+	.swiper-slide {
+		text-align: center;
+		font-size: 18px;
+		background: #fff;
+		/* Center slide text vertically */
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		-webkit-justify-content: center;
+		justify-content: center;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		-webkit-align-items: center;
+		align-items: center;
+	}
+</style> 
+<script type="text/javascript" src="/public/libs/swiper/js/swiper.min.js"></script> 
+
+<div class="container"> 
+	<div id="pager"> 
+		<div class="fs-wrap"> 
+			<!-- Swiper --> 
+			<div class="swiper-container"> 
+				<div class="swiper-wrapper"> 
+					<div class="swiper-slide">
+						Slide 1
+					</div> 
+					<div class="swiper-slide">
+						Slide 2
+					</div> 
+					<div class="swiper-slide">
+						Slide 3
+					</div> 
+					<div class="swiper-slide">
+						Slide 4
+					</div> 
+					<div class="swiper-slide">
+						Slide 5
+					</div> 
+					<div class="swiper-slide">
+						Slide 6
+					</div> 
+					<div class="swiper-slide">
+						Slide 7
+					</div> 
+					<div class="swiper-slide">
+						Slide 8
+					</div> 
+					<div class="swiper-slide">
+						Slide 9
+					</div> 
+					<div class="swiper-slide">
+						Slide 10
+					</div> 
+				</div> 
+				<!-- Add Pagination --> 
+				<div class="swiper-pagination"></div> 
+				<!-- Add Arrows --> 
+				<div class="swiper-button-next"></div> 
+				<div class="swiper-button-prev"></div> 
+			</div> 
+		</div> 
+	</div> 
+</div> 
+<script>
+	var swiper = new Swiper('.swiper-container', {
+		pagination: '.swiper-pagination',
+		paginationClickable: true,
+		nextButton: '.swiper-button-next',
+		prevButton: '.swiper-button-prev',
+		spaceBetween: 0,
+		loop: true
+	});
+</script> 
+<div class="main-wrapper"> 
+	<div class="container"> 
+		<div class="main-content">
+			<%- partial('sidebar')%> 
+			<div class="content-area"> 
+				<div class="content-home">
+					<div class="content"> 
+						<article class="post format-gallery"> 
+							<div id="post" class="post-box"> 
+								<header> 
+									<div class="post-cats"> 
+										<span class="post-type post-type-gallery"><i class="fa fa-th-large"></i></span>
+										<a href="http://demo.bloompixel.com/travelista/category/gallery/">Gallery</a> 
+									</div> 
+									<h2 class="title entry-title title32"> <a href="http://demo.bloompixel.com/travelista/2014/10/15/wow-so-amazing-in-asia/" rel="bookmark">Wow so Amazing in Asia</a> </h2> 
+									<div class="post-meta"> 
+										<span class="post-author"><i class="fa fa-user"></i> <a href="http://demo.bloompixel.com/travelista/author/ezarazor/" rel="author">zazilla</a></span> 
+										<span class="post-date"><time datetime="2014-10-15T11:59:49+00:00"><i class="fa fa-clock-o"></i> October 15, 2014</time></span> 
+										<span class="post-comments"><i class="fa fa-comments-o"></i> <a href="http://demo.bloompixel.com/travelista/2014/10/15/wow-so-amazing-in-asia/#comments" class="comments-link">3 Comments</a></span> 
+										<span class="post-views"><i class="fa fa-eye"></i> 2006 Views</span> 
+									</div>
+									<!--.post-meta--> 
+								</header>
+								<!--.header--> 
+								<div class="flexslider galleryslider" style="height: 355px;"> 
+									<ul class="slides"> 
+										<li style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 1; display: block; z-index: 2;" class="flex-active-slide"><img src="http://demo.bloompixel.com/travelista/wp-content/uploads/sites/18/2014/02/bsrOzgDkQhGRKOVC7Era_9X6A3584-770x370.jpg" alt="" width="770" height="355" draggable="false" class="hoverZoomLink" /></li>
+
+									</ul> 
+								</div> 
+								<div class="post-inner"> 
+									<div class="post-content entry-content"> 
+										<p>Ut pellentesque dignissim turpis, nec blandit magna venenatis non. Nullam quis orci non ligula blandit mattis ac sit amet eros. Nam eget tempor lorem. Nam et lectus volutpat, placerat enim fringilla, varius orci. Sed bibendum velit vitae mauris dignissim tristique. Donec ac ligula dapibus, sagittis odio ultricies, imperdiet ipsum. Aenean semper mollis elit, quis tempus eros fermentum et.</p> 
+										<p>Etiam in cursus lectus, vitae ullamcorper tortor. Praesent aliquet lacus auctor, scelerisque nisi sed, molestie dolor. Suspendisse condimentum velit massa, a sodales ante pharetra id. Mauris a posuere orci. Ut ultricies justo sed quam posuere, a aliquam tellus commodo. Aenean in lorem arcu. Etiam nec dapibus diam. Quisque dictum luctus bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam nunc nibh, tristique non turpis ut, pulvinar gravida felis.</p> 
+										<p> <a href="http://demo.bloompixel.com/travelista/2014/10/15/wow-so-amazing-in-asia/" class="more-link">Read More</a></p> 
+									</div>
+									<!--post-content--> 
+								</div>
+								<!--.post-inner--> 
+								<div class="share-buttons"> 
+									<div class="social-buttons clearfix"> 
+										<!-- Facebook --> 
+										<div class="social-btn social-fb"> 
+											<a rel="nofollow" href="http://www.facebook.com/share.php?u=http://demo.bloompixel.com/travelista/2014/10/15/wow-so-amazing-in-asia/&amp;title=Wow+so+Amazing+in+Asia" target="_blank" original-title="Share on Facebook"> <i class="fa fa-facebook"></i> </a> 
+										</div> 
+										<!-- Twitter --> 
+										<div class="social-btn social-twitter"> 
+											<a rel="nofollow" href="http://twitter.com/home?status=Wow+so+Amazing+in+Asia+http://demo.bloompixel.com/travelista/2014/10/15/wow-so-amazing-in-asia/" target="_blank" original-title="Share on Twitter"> <i class="fa fa-twitter"></i> </a> 
+										</div> 
+										<!-- Google+ --> 
+										<div class="social-btn social-gplus"> 
+											<a rel="nofollow" href="https://plus.google.com/share?url=http://demo.bloompixel.com/travelista/2014/10/15/wow-so-amazing-in-asia/" target="_blank" original-title="Share on Google+"> <i class="fa fa-google-plus"></i> </a> 
+										</div> 
+										<!-- StumbleUpon --> 
+										<div class="social-btn social-stumbleupon"> 
+											<a rel="nofollow" href="http://www.stumbleupon.com/submit?url=http://demo.bloompixel.com/travelista/2014/10/15/wow-so-amazing-in-asia/&amp;title=Wow+so+Amazing+in+Asia" target="_blank" original-title="Share on StumbleUpon"> <i class="fa fa-stumbleupon"></i> </a> 
+										</div> 
+										<!-- Reddit --> 
+										<div class="social-btn social-reddit"> 
+											<a rel="nofollow" href="http://www.reddit.com/submit?url=http://demo.bloompixel.com/travelista/2014/10/15/wow-so-amazing-in-asia/&amp;title=Wow+so+Amazing+in+Asia" target="_blank" original-title="Share on Reddit"> <i class="fa fa-reddit"></i> </a> 
+										</div> 
+										<!-- Delicious --> 
+										<div class="social-btn social-delicious"> 
+											<a rel="nofollow" href="http://del.icio.us/post?url=http://demo.bloompixel.com/travelista/2014/10/15/wow-so-amazing-in-asia/&amp;title=Wow+so+Amazing+in+Asia&amp;notes=Wow+so+Amazing+in+Asia" target="_blank" original-title="Share on Delicious"> <i class="fa fa-delicious"></i> </a> 
+										</div> 
+									</div> 
+								</div>
+								<!--.share-buttons--> 
+							</div>
+							<!--.post excerpt--> 
+						</article> 
+					</div> 
+				</div>
+				<nav class="navigation paging-navigation" role="navigation">
+					<div class="pagination loop-pagination">
+						<span class="page-numbers current">1</span>
+						<a class="page-numbers" href="http://demo.bloompixel.com/travelista/page/2/">2</a>
+						<a class="next page-numbers" href="http://demo.bloompixel.com/travelista/page/2/">Next →</a>			
+					</div>
+					<!-- .pagination -->
+				</nav>
+				<!--.content-home--> 
+			</div> 
+		</div> 
+	</div> 
+</div>

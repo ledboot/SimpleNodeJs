@@ -1,0 +1,480 @@
+body {
+	background-color: #f9f9f9;
+	background-image: url(../images/pattern23.png);
+	background-repeat: repeat;
+	background-attachment: scroll;
+	background-position: 0 0;
+	background-size: inherit;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+a, a:hover, a:focus {
+	text-decoration: none;
+}
+
+a, a:hover, .title a:hover, .sidebar a:hover, .sidebar-small-widget a:hover, .breadcrumbs a:hover, .meta a:hover, .post-meta a:hover, .post .post-content ul li:before, .content-page .post-content ul li:before, .reply:hover i, .reply:hover a, .edit-post a, .relatedPosts .widgettitle a:hover, .error-text {
+	color: #99cc00;
+}
+
+article{
+	display: block;
+}
+p { margin-bottom: 20px }
+
+.clearfix:after {
+	clear: both;
+	content: "";
+	font-size: 0;
+	height: 0;
+	display: block;
+	visibility: hidden;
+}
+
+.read-more a, .more-link {
+  background: #99cc00;
+  color: #fff;
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 3px 32px 3px 16px;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.content-area a {
+  -webkit-transition: all 0.25s linear;
+  -moz-transition: all 0.25s linear;
+  transition: all 0.25s linear;
+}
+
+/*---[ Social Share Buttons ]---*/
+.share-buttons {
+	overflow:hidden;
+	margin:0;
+	padding:14px 0 0;
+	position: relative;
+	text-align:center
+}
+.share-buttons:before {
+	border-top: 1px dashed rgba(0, 0, 0, 0.1);
+	position: absolute;
+	left: 0;
+	top: 30px;
+	width: 100%;
+	height: 1px;
+	content: ''
+}
+.social-buttons {
+	position: relative;
+	z-index: 99
+}
+.social-btn {
+	display:inline-block;
+	margin:0 0 15px 0;
+	padding: 0 7px 0 6px
+}
+.social-btn a {
+	color:#000;
+	display:block;
+	font-size:16px;
+	line-height:24px;
+	padding:4px 0;
+	position: relative;
+	text-align:center;
+	width:32px;
+}
+.social-btn a:before,
+.social-btn a:after {
+	content: '';
+	top: 0;
+	left: 0;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: block;
+	z-index: 100;
+	-ms-transform: rotate(45deg); /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+    transform: rotate(45deg);
+}
+.social-btn a:before { z-index: 100 }
+.social-btn a:after {
+	background: #fff;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	z-index: -1;
+    -webkit-transition: all 0.25s linear;
+    -moz-transition: all 0.25s linear;
+    transition: all 0.25s linear;
+}
+.social-btn a:hover:after {
+	-ms-transform: rotate(0deg); /* IE 9 */
+    -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+    transform: rotate(0deg);
+}
+.share-buttons .social-btn a:hover { color:#fff; }
+.social-fb a:hover:after { background:#395aa1 }
+.social-twitter a:hover:after { background:#17a8dd }
+.social-gplus a:hover:after { background:#fc5656 }
+.social-stumble a:hover:after { background:#eb4924 }
+.social-pin a:hover:after { background:#BE202E }
+.social-linkedin a:hover:after { background:#017EB4 }
+.social-pinterest a:hover:after { background:#cc2127 }
+.social-stumbleupon a:hover:after { background:#f04f23 }
+.social-reddit a:hover:after { background:#000 }
+.social-tumblr a:hover:after { background:#34465d }
+.social-delicious a:hover:after { background:#3399ff }
+
+
+/*---[ Post Navigation ]---*/
+.navigation {
+	clear:both;
+	display:block
+}
+.paging-navigation {
+	border-bottom:1px solid rgba(0, 0, 0, 0.09);
+	margin-bottom:3px
+}
+
+
+/*---[ Pagination ]---*/
+.pagination,
+.norm-pagination {
+	border-left:1px solid #e3e3e3;
+	clear:both;
+	font-size:14px;
+	margin:0;
+	padding:20px;
+	overflow:hidden;
+	text-align: center;
+	display: block;
+}
+.norm-pagination {
+    border-bottom:1px solid #e3e3e3;
+    margin-bottom:3px
+}
+.single .pagination {
+    border:0;
+    margin:15px 0 20px;
+    padding:0
+}
+.single .pagination a { background:rgba(0, 0, 0, 0.04) }
+.single .pagination a:hover { color:#fff }
+.norm-pagination { padding:15px }
+.norm-pagination .nav-previous a { float:left }
+.norm-pagination .nav-next a { float:right }
+.pagination span,
+.pagination a {
+	border:1px solid #eaeaea;
+	color:#333;
+	display:inline-block;
+	margin:0 10px 0 0;
+	padding:4px 11px;
+}
+.pagination a {
+	background:#f6f6f6;
+	color:#777
+}
+.pagination span {
+	background:#f6f6f6;
+	color:#777
+}
+.pagination .current,
+.pagination a:hover { color:#fff }
+.page-links-title {
+    display:inline-block;
+    font-weight:400;
+    margin:0 10px 0 0
+}
+.single .pagination span,
+.single .pagination a {
+	line-height:1.6;
+	margin:0 6px 0 0
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/*	8. Sidebar
+/*-----------------------------------------------------------------------------------*/
+.sidebar {
+	background:transparent;
+	float:left;
+	margin:0;
+	width:31.6%;
+}
+.sidebar a {
+	color:#333;
+    -webkit-transition: background-color, color 0.2s linear;
+    -moz-transition: background-color, color 0.2s linear;
+    transition: background-color, color 0.2s linear;
+}
+#sidebar,
+.small-sidebar {
+	border-bottom:1px solid rgba(0, 0, 0, 0.09);
+	border-left:1px solid rgba(0, 0, 0, 0.09);
+	border-right:1px solid rgba(0, 0, 0, 0.09);
+	margin:0 3px 3px;
+	padding:20px 20px 0;
+}
+.widget {
+	margin-bottom:20px;
+	overflow:hidden;
+}
+.widget-title,
+.section-heading {
+	border-bottom:1px dotted rgba(0, 0, 0, 0.1);
+	font-size:18px;
+	font-weight:700;
+	line-height:20px;
+	margin-bottom:20px;
+	padding:0 0 8px;
+	position:relative
+}
+.widget-title span,
+#tabs li.active span,
+.section-heading span {
+	border-left: 5px solid #99cc00;
+	display:inline-block;
+	padding:0 0 1px 10px
+}
+.widget-title i { margin-right:5px }
+.widget li {
+	list-style:none;
+	margin:0 0 7px;
+	position:relative;
+}
+.widget ul.children {
+	padding-left:20px;
+}
+.widget ul.children li:last-child {
+	border-bottom:0;
+	padding-bottom:0
+}
+.sidebar-widget {
+	list-style:none;
+	margin-bottom:30px;
+	padding:0;
+	position:relative
+}
+.sidebar-widget a,
+.sidebar-small-widget a { color:#333 }
+.sidebar .search-button { float:left }
+.sidebar-widget li:last-child {
+	margin-bottom:0
+}
+.widget .menu li { float:none }
+.widget ul li ul li {
+	border-bottom:none;
+	margin-bottom:0
+}
+.widget .widgetslider,
+.widget .widgetslider:after {
+	border:0
+}
+.widget .widgetslider li {
+	border:0;
+	margin:0;
+	padding:0;
+	list-style:none
+}
+.widget.featured-b {
+	border:0;
+	margin-bottom:0;
+	padding-bottom:0
+}
+.widget .featured-item {
+	margin:0 0 20px;
+	width:100%
+}
+.sidebar-small {
+	float:left;
+	margin:0;
+	width:23.1%
+}
+
+
+/*-----------------------*/
+/*	10.3. Search Form
+/*-----------------------*/
+.searchform {
+	padding:0;
+	position:relative;
+	width:100%
+}
+.searchform fieldset {
+	border:1px solid rgba(0, 0, 0, 0.11);
+	color:#888;
+}
+.s {
+	background:transparent;
+	border:none;
+	color:#777;
+	float:left;
+	height:35px;
+	margin:0;
+	outline:0;
+	padding:10px 0 9px 3%;
+	width:85%;
+}
+.search-button {
+	background:rgba(0, 0, 0, 0.08);
+	border:none;
+	color:#fff;
+	cursor:pointer;
+	display:block;
+	float: left;
+	font-size:12px;
+	font-weight:700;
+	min-width:13px;
+	padding:0;
+	height:35px;
+	text-transform:uppercase;
+	width:15%;
+    -webkit-transition: all 0.25s linear;
+    -moz-transition: all 0.25s linear;
+    transition: all 0.25s linear;
+}
+.search-button:hover { background: #000 }
+header .searchform {
+	background:transparent;
+	float:right;
+	padding:0;
+	width:100%
+}
+header .searchform i {
+	position:absolute;
+	top:18px;
+	right:10px;
+	z-index:10
+}
+header .searchform fieldset { border:0 }
+header .s {
+	background:#222;
+	border: 1px solid #000;	
+	display: none;
+	float:left;
+	right: 50px;
+	padding: 21px 0;
+	position: absolute;
+	width: 220px;
+	text-indent: 15px
+}
+header .search-button { 
+	background:rgba(255,255,255,0.2);
+	color:#fff;
+	height:60px;
+	width:50px;
+	z-index:99
+}
+header .search-button:hover { background: transparent; }
+
+
+/*-----------------------*/
+/*	10.10. Tabs
+/*-----------------------*/
+#tabs-widget {
+	background:#fff;
+	margin-bottom:30px;
+	overflow:hidden;
+}
+#tabs {
+	padding: 0;
+    list-style:none;
+	margin:0 0 15px;
+	overflow:hidden;
+}
+#tabs li {
+	border:0;
+    display: inline;
+	float:left;
+	width:50%;
+	margin:0;
+	padding:0;
+	position:relative;
+}
+#tabs li span {
+	border-left: 5px solid rgba(0, 0, 0, 0.1);
+	display: inline-block;
+	padding: 0 0 1px 10px
+}
+#tabs li a {
+	border-bottom:1px dotted rgba(0, 0, 0, 0.1);
+	color:#bbb;
+	display:block;
+	font-size:18px;
+	float:right;
+	line-height:20px;
+	padding:0 0 5px;
+	position:relative;
+    text-decoration:none;
+	overflow:hidden;
+	text-transform:uppercase;
+	width:100%;
+}
+#tabs li.recent-tab a { }
+#tabs li.active a { color:#000 }
+#tabs-content ul {
+	margin:0;
+	padding:0
+}
+#tabs-content li {
+	border-bottom:1px solid #eee;
+	margin:0 0 15px;
+	overflow:hidden;
+	padding:0 0 15px
+}
+#tabs-content li:last-child { margin-bottom:0 }
+.tab-content { display: none }
+.tabs-meta { display:block }
+.comment-text {
+	color:#777;
+	display:block;
+	font-size:12px
+}
+
+/*-----------------------*/
+/*	10.11. Popular Posts
+/*-----------------------*/
+.widgetthumb {
+	float:left;
+	margin:4px 10px 0 0;
+	width:100%
+}
+.thumbnail-big .widgetthumb { margin: 0 0 10px 0 }
+.popular-posts { display:block }
+.thumbnail {
+	float:left;
+	margin-right:10px;
+	position:relative;
+	max-width:27.5%;
+	width:65px;
+	padding: 0;
+	border: none;
+}
+.thumbnail-big {
+	float:none;
+	margin:0;
+	max-width:100%;
+	width:100%
+}
+.info {
+	overflow: hidden;
+}
+.widgettitle {
+	display:block;
+	font-size:16px;
+	font-weight:400;
+	line-height:22px;
+	margin-bottom: 5px
+}
+.meta,
+.r-meta {
+	color:#999;
+	display:block;
+	font-size:12px;
+}
+.meta a { color:#999 }
+.meta .post-author,
+.meta .post-comments,
+.meta .widget-cats,
+.meta time { margin-right:10px }

@@ -19,6 +19,7 @@ gulp.task('refBowerComponents',function(){
 	gulp.src('./bower_components/font-awesome/css/font-awesome.min.css').pipe(gulp.dest('./public/libs/font-awesome/css'));
 	gulp.src('./bower_components/Swiper/dist/css/swiper.min.css').pipe(gulp.dest('./public/libs/swiper/css'));
 	gulp.src('./bower_components/Swiper/dist/js/swiper.min.js').pipe(gulp.dest('./public/libs/swiper/js'));
+	gulp.src('./bower_components/Swiper/dist/js/swiper.jquery.min.js').pipe(gulp.dest('./public/libs/swiper/js'));
 });
 
 gulp.task('bs-reload',function(){

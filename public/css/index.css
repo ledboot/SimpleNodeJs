@@ -1,0 +1,26 @@
+/*-----------------------*/
+/*	sidebar
+/*-----------------------*/
+.widget-title, #tabs li {
+  font-family: Playfair Display;
+  line-height: 20px;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 18px;
+}
+
+.sidebar-widget {
+  color: #555555;
+}
+
+.widget-title, .widgettitle a, #tabs li.active a {
+  color: #000000;
+}
+
+.widget-title, #tabs li {
+  font-family: Playfair Display;
+  line-height: 20px;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 18px;
+}
