@@ -58,7 +58,7 @@
 }
 
 
-	/*-----------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------*/
 /*	 Header
 /*-----------------------------------------------------------------------------------*/
 .top-bar {
@@ -142,7 +142,7 @@
 	margin: 30px auto 0;
 	overflow: hidden;
 	position: relative;
-	max-width: 100%
+	max-width: 100%;
 }
 
 .main-wrapper {
@@ -153,8 +153,6 @@
 
 #pager {
 	background: transparent;
-	line-height: 400px;
-	height: 400px;
 }
 
 .main-content {
@@ -196,154 +194,7 @@
 }
 
 
-/*-----------------------*/
-/*	Post Formats
-/*-----------------------*/
-.post {
-	margin-bottom: 30px;
-	padding: 0;
-	overflow: hidden;
-	position: relative
-}
 
-.post-box {
-	margin-left: 30px;
-	margin-right: 30px;
-	overflow: hidden;
-	padding: 0;
-}
-.post-meta, .meta, .r-meta, .post-cats {
-  font-family: Roboto;
-  text-transform: uppercase;
-  line-height: 20px;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 11px;
-}
-
-.post-cats {
-	border-bottom: 1px dotted rgba(0, 0, 0, 0.1);
-	font-size: 10px;
-}
-
-.post-cats a {
-	background: #262626;
-	color: #fff;
-	display: inline-block;
-	font-size: 11px;
-	line-height: 17px;
-	padding: 5px 10px;
-	position: relative;
-	z-index: 1;
-}
-
-.post .post-cats a:hover {
-	color: #fff
-}
-
-.post-cats a:before {
-	background: #99cc00;
-	content: '';
-	display: block;
-	;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 0;
-	z-index: -1;
-	-webkit-transition: all 0.3s linear;
-	-moz-transition: all 0.3s linear;
-	transition: all 0.3s linear;
-}
-
-.post-cats a:hover:before {
-	width: 100%
-}
-
-.post-type {
-	display: inline-block;
-	font-size: 14px;
-	vertical-align: bottom;
-}
-
-.post-type i {
-	background: #99cc00;
-	color: #fff;
-	display: inline-block;
-	font-size: 11px;
-	padding: 8px 10px
-}
-
-.title {
-	font-family: Playfair Display;
-	text-transform: uppercase;
-	line-height: 48px;
-	font-weight: 400;
-	font-style: normal;
-	font-size: 48px;
-}
-
-.entry-title a {
-	color: #000000;
-}
-
-.post-meta {
-	clear: both;
-	color: #999;
-	font-size: 12px;
-	margin-bottom: 20px;
-	overflow: hidden;
-}
-
-.format-gallery a:hover, .format-gallery .post-meta .fa {
-	color: #99cc00;
-}
-.post-author, .post-meta, .post-meta a, .r-meta, .r-meta a, .comment-meta a, #commentform p label, .single .pagination a {
-  color: #aaaaaa;
-}
-.post-meta span {
-  display: inline-block;
-  padding-right: 16px;
-  margin: 0 10px 0 0;
-  position: relative;
-}
-
-.post-content {
-  font-family: Playfair Display;
-  line-height: 24px;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 14px;
-}
-.post-box, .breadcrumbs, .author-box, .relatedPosts, #comments, .comment-reply-link, #respond, .pagination, .norm-pagination {
-  color: #777777;
-}
-.format-gallery .post-type i, .format-gallery .post-cats a:before, .format-gallery .more-link, .format-gallery .post-cats a:hover, .format-gallery .read-more a {
-  background: #99cc00;
-}
-
-a, a:hover, .title a:hover, .sidebar a:hover, .sidebar-small-widget a:hover, .breadcrumbs a:hover, .meta a:hover, .post-meta a:hover, .post .post-content ul li:before, .content-page .post-content ul li:before, .reply:hover i, .reply:hover a, .edit-post a, .relatedPosts .widgettitle a:hover, .error-text {
-  color: #99cc00;
-}
-.post-content .more-link:hover{
-	background: #262626;
-	color: #fff;
-}
-.entry-title, .entry-title a, .social-btn a, .section-heading, .author-box h5, .title a, .post-navigation a {
-  color: #000000;
-}
-.content-home {
-  float: left;
-  margin: 0;
-  width: 100%;
-}
-.widget-title span, #tabs li.active span, .post-content blockquote, .tagcloud a:hover .post blockquote, .pagination .current, .pagination a:hover, .comment-reply-link:hover, .footer-links {
-  border-color: #99cc00 !important;
-}
-.header-search:hover .search-button, .search-button, .nav-menu ul li ul li a:hover, .read-more a, .post-type i, .post-cats a:before, .widget_archive a:hover .cat-count, .cat-item a:hover .cat-count, .tagcloud a:hover, .pagination .current, .pagination a:hover, .post-format-quote, .flex-direction-nav a:hover, .flex-control-nav a.flex-active, .subscribe-widget input[type='submit'], #wp-calendar caption, #wp-calendar td#today, #commentform #submit, .wpcf7-submit, .off-canvas-search, .author-location span, .jetpack_subscription_widget input[type=submit] {
-  background-color: #99cc00;
-}
 
 /*-----------------------------------------------------------------------------------*/
 /*	sign
@@ -356,8 +207,3 @@ a, a:hover, .title a:hover, .sidebar a:hover, .sidebar-small-widget a:hover, .br
 		width: 500px;
 	}
 
-
-
-/*-------------------*/
-/* Social Links
-/*-------------------*/

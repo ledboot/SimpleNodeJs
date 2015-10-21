@@ -1,4 +1,4 @@
-
+<link rel="stylesheet" type="text/css" href="/public/css/index.css">
 <style type="text/css">
 	.swiper-container {
 		width: 100%;
@@ -22,12 +22,39 @@
 		-webkit-align-items: center;
 		align-items: center;
 	}
+	.swiper-container-post {
+		width: 100%;
+		height: 350px;
+	}
 </style> 
 <script type="text/javascript" src="/public/libs/swiper/js/swiper.min.js"></script> 
+<script>
+	$(document).ready(function () {
+    //initialize swiper when document ready  
+    var mainSwiper = new Swiper ('.swiper-container', {
+      // Optional parameters
+      pagination: '.swiper-pagination',
+      nextButton: '.swiper-button-next',
+      prevButton: '.swiper-button-prev',
+      spaceBetween: 0,
+      paginationClickable: true,
+      effect: 'fade',
+      loop: true
+  });     
+    var postSwiper = new Swiper ('.swiper-container-post', {
+      // Optional parameters
+      pagination: '.swiper-pagination',
+      spaceBetween: 0,
+      paginationClickable: true,
+      effect: 'fade',
+      loop: true
+  });    
+});
+</script> 
 
 <div class="container"> 
 	<div id="pager"> 
-		<div class="fs-wrap"> 
+		<div class="fs-wrap swiper-wrap"> 
 			<!-- Swiper --> 
 			<div class="swiper-container"> 
 				<div class="swiper-wrapper"> 
@@ -40,27 +67,6 @@
 					<div class="swiper-slide">
 						Slide 3
 					</div> 
-					<div class="swiper-slide">
-						Slide 4
-					</div> 
-					<div class="swiper-slide">
-						Slide 5
-					</div> 
-					<div class="swiper-slide">
-						Slide 6
-					</div> 
-					<div class="swiper-slide">
-						Slide 7
-					</div> 
-					<div class="swiper-slide">
-						Slide 8
-					</div> 
-					<div class="swiper-slide">
-						Slide 9
-					</div> 
-					<div class="swiper-slide">
-						Slide 10
-					</div> 
 				</div> 
 				<!-- Add Pagination --> 
 				<div class="swiper-pagination"></div> 
@@ -71,16 +77,6 @@
 		</div> 
 	</div> 
 </div> 
-<script>
-	var swiper = new Swiper('.swiper-container', {
-		pagination: '.swiper-pagination',
-		paginationClickable: true,
-		nextButton: '.swiper-button-next',
-		prevButton: '.swiper-button-prev',
-		spaceBetween: 0,
-		loop: true
-	});
-</script> 
 <div class="main-wrapper"> 
 	<div class="container"> 
 		<div class="main-content">
@@ -104,13 +100,25 @@
 									</div>
 									<!--.post-meta--> 
 								</header>
-								<!--.header--> 
-								<div class="flexslider galleryslider" style="height: 355px;"> 
-									<ul class="slides"> 
-										<li style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 1; display: block; z-index: 2;" class="flex-active-slide"><img src="http://demo.bloompixel.com/travelista/wp-content/uploads/sites/18/2014/02/bsrOzgDkQhGRKOVC7Era_9X6A3584-770x370.jpg" alt="" width="770" height="355" draggable="false" class="hoverZoomLink" /></li>
+								<!--.header-->
+								<div class="swiper-wrap swiper-post">
 
-									</ul> 
-								</div> 
+									<div class="swiper-container-post"> 
+										<div class="swiper-wrapper"> 
+											<div class="swiper-slide">
+												Slide 1
+											</div> 
+											<div class="swiper-slide">
+												Slide 2
+											</div> 
+											<div class="swiper-slide">
+												Slide 3
+											</div> 
+										</div> 
+										<!-- Add Pagination --> 
+										<div class="swiper-pagination"></div> 
+									</div>
+								</div>
 								<div class="post-inner"> 
 									<div class="post-content entry-content"> 
 										<p>Ut pellentesque dignissim turpis, nec blandit magna venenatis non. Nullam quis orci non ligula blandit mattis ac sit amet eros. Nam eget tempor lorem. Nam et lectus volutpat, placerat enim fringilla, varius orci. Sed bibendum velit vitae mauris dignissim tristique. Donec ac ligula dapibus, sagittis odio ultricies, imperdiet ipsum. Aenean semper mollis elit, quis tempus eros fermentum et.</p> 
